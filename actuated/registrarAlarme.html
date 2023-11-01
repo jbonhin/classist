@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <title>Alarme</title>
+</head>
+
+<body>
+
+    <div class="d-flex">
+
+        <div class=" content p-1">
+        
+        
+            <div class="list-group-item">
+                <div class="d-flex">
+                    <div class="mr-auto p-2">
+                        <h2 class="display-4 title">Novo Alarme</h2>
+                    </div>
+                    <div class="p-2">
+                        <a href="../atuados.html" class="btn btn-outline-info btn-sm">Listar</a>
+                    </div>
+                </div>
+                <hr class="hr-title">
+                        <span class="msg"></span>
+                <form id="new_Triggered" method="POST" action="">
+
+                    <label>Alarme: *</label>
+                    <select name="id_alarm" id="id_alarm">
+                        <option value="">Selecione</option>
+                        <option value='2'>Alarme 001</option>
+                        <option value='3'>Alarme 002</option>
+                        <option value='4'>Alarme 003</option>
+                        <option value='5'>Alarme 004</option>
+                        <option value='6'>Alarme 005</option>
+                        <option value='7'>Alarme 006</option>
+                    </select><br><br>
+
+                    <label>Data da Entrada: *</label>
+                    <input id="entry_date" name="entry_date" type="datetime-local" min="2022-01-01T00:00" max="2022-07-31T23:59" value=""><br><br>
+
+                    <label>Data da Saída: </label>
+                    <input id="departure_date" name="departure_date" type="datetime-local" min="2022-01-01T00:00" max="2022-07-31T23:59" value=""><br><br>
+
+                    <label>Status do Alarme: *</label>
+                    <select name="id_status" id="id_status">
+                        <option value="">Selecione</option>
+                        <option value='1'>Ativado</option>
+                        <option value='2'>Desativado</option>            
+                    </select><br><br>
+
+                    <input class="btn btn-outline-success" name="SendTriggered" type="submit" value="Cadastrar">
+                </form>
+            </div>
+
+        </div>
+            
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../assets/js/popper.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/personalizado.js"></script>
+</body>
+
+</html>
